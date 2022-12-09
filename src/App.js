@@ -11,7 +11,7 @@ function App() {
   const [showLogin, setShowLogin] = useState(false);
   return (
     <>
-      <div className="flex-col  w-full overflow-scroll">
+      <div className="flex-col  w-full">
         <Header setShowLogin={setShowLogin} />
         <Routes>
           <Route path="/" element={<Home />} />

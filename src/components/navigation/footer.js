@@ -23,9 +23,9 @@ const Footer = () => {
       </section>
       <div className="w-screen bg-gray-700 h-80 flex justify-center items-center">
         <div className="mr-10">
-          <div className="text-6xl font-extrabold text-white mb-3">
+          <Link to="/" className="text-6xl font-extrabold text-white mb-3">
             <span className="text-blue-300">Ex-</span>LandLord
-          </div>
+          </Link>
           <div className="flex flex-col  text-gray-300">
             <span className="mb-2">P.O.Box AQ 249, Abokobi-Accra</span>
             <span className="mb-2">+233 (503) 848 404</span>

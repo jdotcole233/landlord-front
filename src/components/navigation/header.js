@@ -7,10 +7,10 @@ const Header = ({
   return (
     <>
       {/* Top Navigation */}
-      <section className="w-screen bg-neutral-50 flex justify-around h-20  w-full px-20 items-center">
-        <div className="text-6xl font-extrabold text-blue-800 mr-3">
-          <span className="text-blue-300">ex-</span>LandLord
-        </div>
+      <section className="w-screen bg-neutral-50 flex justify-around h-20  px-20 items-center">
+        <Link to="/"  className="text-6xl font-extrabold text-blue-800 mr-3">
+          <span className="text-blue-300">Ex-</span>LandLord
+        </Link>
         <div className="flex flex-1 justify-end mr-4">
           <ul className="flex justify-around text-md w-64 text-blue-700">
             <li className="mr-1">
