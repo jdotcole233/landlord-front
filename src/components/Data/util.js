@@ -16,7 +16,7 @@ export const stats = [
     },
     {
         number: 750,
-        content: 'Tenants',
+        content: 'Happy Tenants',
         color: 700
     }
 ];

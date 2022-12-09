@@ -1,7 +1,7 @@
 import React from "react";
 import { stats } from "../Data/util";
 import { BackgroundBanner } from "../Data/assets";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import Footer from "../navigation/footer";
 
 const Home = () => {
@@ -18,6 +18,27 @@ const Home = () => {
       >
         <RegisterForm />
       </section>
+
+      <section className="flex flex-col items-center justify-center h-96 py-5 bg-[#F5FAFF] ">
+        <h1 className="text-4xl text-center font-bold mb-2">Achievement</h1>
+        <h1 className="text-center text-gray-500 mb-1">
+          We are helping to change the ways landlords handle their properties
+        </h1>
+        <h1 className="text-center text-gray-500">
+          The numbers speaks for itself.
+        </h1>
+        <div className="flex mt-10 px-10">
+          {stats.map((stat, key) => (
+            <HomeStates
+              key={key}
+              number={stat.number}
+              content={stat.content}
+              color={stat.color}
+            />
+          ))}
+        </div>
+      </section>
+
       <section className="py-10">
         <h1 className="text-4xl text-center font-bold mb-2">How it Works?</h1>
         <h1 className="text-center text-gray-500 mb-1">
@@ -27,16 +48,16 @@ const Home = () => {
         <h1 className="text-center text-gray-500">
           Let us help you keep track of it
         </h1>
-        <div  className="flex justify-center mt-10">
-          <div className="border mr-20 w-80 flex-col justify-center items-center py-5">
-            <div className=" flex justify-center">
+        <div className="flex justify-center mt-10">
+          <div className="mr-20 w-80 flex flex-col justify-center items-center py-5">
+            <div className=" flex justify-center  w-48  ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
-                stroke="currentColor"
-                className=" w-24 h-24"
+                stroke="#009933"
+                className="w-24 h-24"
               >
                 <path
                   strokeLinecap="round"
@@ -50,14 +71,14 @@ const Home = () => {
             <p className="text-center text-sm">Provide base details</p>
           </div>
 
-          <div className="border mr-20 w-80 flex-col justify-center items-center py-5">
+          <div className=" mr-20 w-80 flex-col justify-center items-center py-5">
             <div className=" flex justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
-                stroke="currentColor"
+                stroke="#FFA697"
                 className="w-24 h-24"
               >
                 <path
@@ -76,14 +97,14 @@ const Home = () => {
             <p className="text-center text-sm">With simple clicks</p>
           </div>
 
-          <div className="border  w-80 flex-col justify-center items-center py-5">
+          <div className="  w-80 flex-col justify-center items-center py-5">
             <div className=" flex justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
-                stroke="currentColor"
+                stroke="#A0E1FF"
                 className="w-24 h-24"
               >
                 <path
@@ -101,30 +122,22 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="border px-20 h-36 bg-blue-500 flex">
-        <div className="flex-1 flex-col items-baseline border">
-          <div className="text-white border font-semibold text-2xl">Want to know more about Landlord?</div>
-          <div className="text-white border ">Reach out to us.</div>
+      <section className=" px-20 h-36 bg-blue-500 flex">
+        <div className="flex-1 flex flex-col items-end justify-center">
+          <div className="text-white  font-semibold text-2xl">
+            Want to know more about Landlord?
+          </div>
+          <div className="text-white  ">Reach out to us.</div>
         </div>
         <div className=" flex-1 flex justify-center items-center">
-          <Link className="bg-white px-8 py-3 border-4 border-blue-600 rounded-full text-lg" to="/aboutus">Read more</Link>
+          <Link
+            className="bg-white px-8 py-3 border-4 border-blue-600 rounded-full text-lg"
+            to="/aboutus"
+          >
+            Read more
+          </Link>
         </div>
       </section>
-      {/* <section className="flex-col bg-blue-200 ">
-        <div className="mt-10 px-10">
-          <h1 className="text-7xl font-semibold  drop-shadow-lg">
-            Mange your assets
-          </h1>
-          <h1 className="text-7xl font-semibold drop-shadow-lg">Easily</h1>
-        </div>
-        <div className="flex  mt-10 px-10">
-          {stats.map((stat, key) => (
-            <HomeStates key={key} number={stat.number} content={stat.content} color={stat.color} />
-          ))}
-        </div>
-      </section>
-      <section className="bg-red-500 h-80">
-      </section> */}
       <Footer />
     </div>
   );
@@ -133,31 +146,23 @@ const Home = () => {
 const HomeStates = ({ number, content, color }) => {
   return (
     <div
-      className={`bg-blue-${color} mr-3 opacity-75 rounded-md flex flex-col  px-5 py-2 shadow-xl`}
+      className={`-bg-blue-${color} mr-3 opacity-75 w-64 rounded-md flex flex-col  px-5 py-2 `}
     >
-      <div className="text-5xl font-semibold p-0 text-white flex items-center justify-center">
-        +{number}
+      <div className="text-3xl font-bold p-0 text-gray-800 flex items-center justify-center">
+        {number}+
       </div>
-      <div className="text-white  p-0 font-extralight h-full text-2xl flex justify-center items-center">
+      <div className="text-gray-800  p-0 font-light h-full text-lg flex justify-center items-center">
         {content}
       </div>
     </div>
   );
 };
 
-const Stages = () => {
-  return (
-    <div>
-      images
-      <h1>Title</h1>
-      <p>Description</p>
-    </div>
-  );
-};
+
 
 const RegisterForm = () => {
   return (
-    <div className=" w-4/12 h-3/6 bg-white rounded-md px-10 py-10">
+    <div className=" w-4/12  bg-white rounded-md px-10 py-10">
       <h1 className="font-bold text-gray-600 text-4xl text-left">
         Setup your Home
       </h1>

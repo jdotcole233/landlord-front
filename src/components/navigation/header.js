@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({
+  setShowLogin
+}) => {
   return (
     <>
       {/* Top Navigation */}
@@ -44,8 +46,8 @@ const Header = () => {
 
             <span>Register</span>
           </Link>
-          <Link
-            to="Login"
+          <button
+            onClick={() => setShowLogin(true)}
             className="text-white cursor-pointer font-semibold bg-red-600 px-4 text-lg shadow-md mr-2 py-3 rounded flex items-center"
           >
             <svg
@@ -63,7 +65,7 @@ const Header = () => {
               />
             </svg>
             <span>Login</span>
-          </Link>
+          </button>
         </div>
       </section>
     </>
