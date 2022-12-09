@@ -6,7 +6,7 @@ const Login = ({ setShowLogin }) => {
       style={{
         backgroundColor: "rgba(0, 0, 0, 0.7)",
       }}
-      className="w-full h-screen absolute top-0 bottom-0 flex justify-center items-center"
+      className="w-full h-screen  absolute top-0 bottom-0 flex justify-center items-center"
     >
       <div className=" w-3/12   bg-white rounded-md px-10 pb-6 pt-4">
         <div className="flex justify-end ">

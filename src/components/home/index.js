@@ -122,22 +122,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className=" px-20 h-36 bg-blue-500 flex">
-        <div className="flex-1 flex flex-col items-end justify-center">
-          <div className="text-white  font-semibold text-2xl">
-            Want to know more about Landlord?
-          </div>
-          <div className="text-white  ">Reach out to us.</div>
-        </div>
-        <div className=" flex-1 flex justify-center items-center">
-          <Link
-            className="bg-white px-8 py-3 border-4 border-blue-600 rounded-full text-lg"
-            to="/aboutus"
-          >
-            Read more
-          </Link>
-        </div>
-      </section>
+      
       <Footer />
     </div>
   );

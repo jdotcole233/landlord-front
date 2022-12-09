@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.loginModal {
+  background-color: red;
+  animation-name: smooth;
+  animation-duration: 40s;
+}
+
+@keyframes smooth
+{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.5;
+  }
+}

@@ -5,6 +5,22 @@ import { Apple, Android } from "../Data/assets";
 const Footer = () => {
   return (
     <>
+      <section className=" px-20 h-36 bg-blue-500 flex">
+        <div className="flex-1 flex flex-col items-end justify-center">
+          <div className="text-white  font-semibold text-2xl">
+            Want to know more about Landlord?
+          </div>
+          <div className="text-white  ">Reach out to us.</div>
+        </div>
+        <div className=" flex-1 flex justify-center items-center">
+          <Link
+            className="bg-white px-8 py-3 border-4 border-blue-600 rounded-full text-lg"
+            to="/aboutus"
+          >
+            Read more
+          </Link>
+        </div>
+      </section>
       <div className="w-screen bg-gray-700 h-80 flex justify-center items-center">
         <div className="mr-10">
           <div className="text-6xl font-extrabold text-white mb-3">
@@ -25,7 +41,7 @@ const Footer = () => {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/about">About us</Link>
+                <Link to="/aboutus">About us</Link>
               </li>
               <li>
                 <Link to="/contact">Contact us</Link>
