@@ -1,17 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Header = ({
-  setShowLogin
-}) => {
+const Header = ({ setShowLogin, setShowMobileMenu }) => {
   return (
     <>
       {/* Top Navigation */}
-      <section className="w-screen bg-neutral-50 flex justify-around h-20  px-20 items-center">
-        <Link to="/"  className="text-6xl font-extrabold text-blue-800 mr-3">
+      <section className="w-screen bg-neutral-50 flex justify-between lg:justify-around h-20 px-5 lg:px-20 items-center">
+        <Link
+          to="/"
+          className="lg:text-6xl text-2xl font-extrabold text-blue-800 md:mr-3"
+        >
           <span className="text-blue-300">Ex-</span>LandLord
         </Link>
-        <div className="flex flex-1 justify-end mr-4">
+        <div className="hidden lg:flex flex-1 justify-end mr-4">
           <ul className="flex justify-around text-md w-64 text-blue-700">
             <li className="mr-1">
               <Link to="/">Home</Link>
@@ -24,7 +25,7 @@ const Header = ({
             </li>
           </ul>
         </div>
-        <div className="flex mr-2">
+        <div className="hidden lg:flex mr-2">
           <Link
             to="/signup"
             className="text-green-400  font-semibold  px-8 text-lg  mr-2 py-1 flex items-center "
@@ -48,7 +49,7 @@ const Header = ({
           </Link>
           <button
             onClick={() => setShowLogin(true)}
-            className="text-white cursor-pointer font-semibold bg-red-600 px-4 text-lg shadow-md mr-2 py-3 rounded flex items-center"
+            className="text-white cursor-pointer font-semibold bg-red-600 px-4 text-lg shadow-md mr-2 :py-3 rounded flex items-center"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +57,7 @@ const Header = ({
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6 mr-1"
+              className="lg:w-6 lg:h-6 mr-1"
             >
               <path
                 strokeLinecap="round"
@@ -66,6 +67,24 @@ const Header = ({
             </svg>
             <span>Login</span>
           </button>
+        </div>
+
+        {/* Mobile Menu */}
+        <div onClick={() => setShowMobileMenu(true)} >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-11 h-11"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
         </div>
       </section>
     </>

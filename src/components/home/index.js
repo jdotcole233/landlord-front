@@ -1,33 +1,25 @@
 import React from "react";
 import { stats } from "../Data/util";
-import { BackgroundBanner } from "../Data/assets";
-import { Link } from "react-router-dom";
-import Footer from "../navigation/footer";
+import Footer from "../Navigation/footer";
 
 const Home = () => {
   return (
     <div className="w-screen h-screen flex-col justify-start">
       <section
-        style={{
-          backgroundImage: `url(${BackgroundBanner})`,
-          objectFit: "contain",
-          backgroundSize: "100%",
-          backgroundRepeat: "no-repeat",
-        }}
-        className="h-5/6 flex justify-start items-center px-40"
+        className={`lg:h-5/6 bg-landingBanner bg-cover flex justify-start items-center lg:py-0 py-5 px-5 lg:px-40`}
       >
         <RegisterForm />
       </section>
 
       <section className="flex flex-col items-center justify-center h-96 py-5 bg-[#F5FAFF] ">
         <h1 className="text-4xl text-center font-bold mb-2">Achievement</h1>
-        <h1 className="text-center text-gray-500 mb-1">
+        <h1 className="text-center lg:px-0 px-5 text-gray-500 mb-1">
           We are helping to change the ways landlords handle their properties
         </h1>
         <h1 className="text-center text-gray-500">
           The numbers speaks for itself.
         </h1>
-        <div className="flex mt-10 px-10">
+        <div className="lg:flex grid  grid-cols-2 gap-2  mt-10 lg:px-10">
           {stats.map((stat, key) => (
             <HomeStates
               key={key}
@@ -48,9 +40,9 @@ const Home = () => {
         <h1 className="text-center text-gray-500">
           Let us help you keep track of it
         </h1>
-        <div className="flex justify-center mt-10">
-          <div className="mr-20 w-80 flex flex-col justify-center items-center py-5">
-            <div className=" flex justify-center  w-48  ">
+        <div className="flex  flex-col lg:flex-row items-center lg:justify-center mt-10">
+          <div className="lg:mr-20 w-80 flex flex-col justify-center items-center py-5">
+            <div className=" flex justify-center  w-48 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -71,7 +63,7 @@ const Home = () => {
             <p className="text-center text-sm">Provide base details</p>
           </div>
 
-          <div className=" mr-20 w-80 flex-col justify-center items-center py-5">
+          <div className=" lg:mr-20 w-80 flex-col justify-center items-center py-5">
             <div className=" flex justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +123,7 @@ const Home = () => {
 const HomeStates = ({ number, content, color }) => {
   return (
     <div
-      className={`-bg-blue-${color} mr-3 opacity-75 w-64 rounded-md flex flex-col  px-5 py-2 `}
+      className={`-bg-blue-${color} lg:mr-3 opacity-75 lg:w-64 rounded-md flex flex-col px-5 py-2 `}
     >
       <div className="text-3xl font-bold p-0 text-gray-800 flex items-center justify-center">
         {number}+
@@ -147,7 +139,7 @@ const HomeStates = ({ number, content, color }) => {
 
 const RegisterForm = () => {
   return (
-    <div className=" w-4/12  bg-white rounded-md px-10 py-10">
+    <div className=" lg:w-4/12  bg-white rounded-md px-10 py-10">
       <h1 className="font-bold text-gray-600 text-4xl text-left">
         Setup your Home
       </h1>

@@ -8,7 +8,7 @@ const Login = ({ setShowLogin }) => {
       }}
       className="w-full h-screen  absolute top-0 bottom-0 flex justify-center items-center"
     >
-      <div className=" w-3/12   bg-white rounded-md px-10 pb-6 pt-4">
+      <div className="lg:w-3/12   bg-white rounded-md px-10 pb-6 pt-4">
         <div className="flex justify-end ">
           <span onClick={() => setShowLogin(false)} className="cursor-pointer">
             <svg

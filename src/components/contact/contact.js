@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../navigation/footer"
+import Footer from "../Navigation/footer"
 
 const Contact = () => {
   return (
@@ -8,8 +8,8 @@ const Contact = () => {
         <h1 className="text-3xl font-bold text-white">Contact us</h1>
         <p className=" text-blue-200 italic">Establish a connection with us</p>
       </section>
-      <section className="flex py-10">
-        <div className="flex-1 px-32">
+      <section className="flex lg:flex-row flex-col py-10">
+        <div className="flex-1 lg:mb-0 mb-10 px-5 lg:px-32">
           <div>
             <div className="flex mt-4 mb-2">
               <div className=" flex-col mr-6 flex-1">
@@ -56,14 +56,14 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1">
+        <div className="flex-1 lg:px-0 px-5">
           <h1 className="text-3xl font-bold">Get In Touch</h1>
           <p className="leading-loose">
             Feel free to send us an email or reach us on any <br></br> of our
             contact details below
           </p>
 
-          <div className="flex mb-2">
+          <div className="flex mb-10 lg:mb-2 lg:mt-0 mt-10">
             <div className="mr-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +88,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="flex mb-2">
+          <div className="flex mb-10 lg:mb-2">
             <div className="mr-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'landingBanner': "url('assets/images/banner-1.jpg')"
+      }
+    },
   },
   plugins: [],
 }

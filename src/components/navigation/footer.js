@@ -5,8 +5,8 @@ import { Apple, Android } from "../Data/assets";
 const Footer = () => {
   return (
     <>
-      <section className=" px-20 h-36 bg-blue-500 flex">
-        <div className="flex-1 flex flex-col items-end justify-center">
+      <section className="lg:px-20 lg:py-0 py-5 lg:h-36 bg-blue-500 flex lg:flex-row flex-col">
+        <div className="flex-1 flex flex-col items-center lg:items-end justify-center">
           <div className="text-white  font-semibold text-2xl">
             Want to know more about Landlord?
           </div>
@@ -14,15 +14,15 @@ const Footer = () => {
         </div>
         <div className=" flex-1 flex justify-center items-center">
           <Link
-            className="bg-white px-8 py-3 border-4 border-blue-600 rounded-full text-lg"
+            className="bg-white px-4 lg:px-8 py-1 lg:py-3 border-4 border-blue-600 rounded-full text-lg"
             to="/aboutus"
           >
             Read more
           </Link>
         </div>
       </section>
-      <div className="w-screen bg-gray-700 h-80 flex justify-center items-center">
-        <div className="mr-10">
+      <div className="w-screen bg-gray-700 py-2 lg:py-0 lg:h-80 flex lg:flex-row flex-col justify-center items-center">
+        <div className="lg:mr-10 lg:mb-0 mb-10 lg:mt-0 mt-10">
           <Link to="/" className="text-6xl font-extrabold text-white mb-3">
             <span className="text-blue-300">Ex-</span>LandLord
           </Link>
@@ -33,8 +33,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="w-80">
-          <div className="text-xl font-bold text-white mb-3 flex flex-col items-center">
+        <div className="lg:w-80 w-full lg:px-0 px-5 lg:mb-0 mb-10">
+          <div className="text-xl font-bold text-white mb-3 flex flex-col lg:items-center">
             <span>Navigation</span>
             <ul className="text-lg font-light flex flex-col mt-5">
               <li>
@@ -53,8 +53,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="w-80">
-          <div className="text-xl font-bold text-white mb-3 flex flex-col items-center">
+        <div className="lg:w-80 w-full lg:px-0 px-5 lg:mb-0 mb-10">
+          <div className="text-xl font-bold text-white mb-3 flex flex-col lg:items-center">
             <span>My Account</span>
             <ul className="text-lg font-light flex flex-col mt-5">
               <li>
@@ -73,8 +73,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="w-80">
-          <div className="text-xl font-bold text-white mb-3 flex flex-col items-center">
+        <div className="lg:w-80 w-full lg:px-0 px-5 lg:mb-0 mb-10">
+          <div className="text-xl font-bold text-white mb-3 flex flex-col  lg:items-center">
             <span>Download Apps</span>
             <div>
               <div className="border border-gray-500 px-6 py-2 flex mb-4 mt-5">

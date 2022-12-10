@@ -1,6 +1,6 @@
 import React from "react";
 import { AboutBanner, AboutVector } from "../Data/assets";
-import Footer from "../navigation/footer";
+import Footer from "../Navigation/footer";
 const About = () => {
   return (
     <>
@@ -8,13 +8,13 @@ const About = () => {
         <h1 className="text-3xl font-bold text-white">About us</h1>
         <p className=" text-blue-200 italic">Who we are & our mission</p>
       </section>
-      <section className="flex">
+      <section className="flex lg:flex-row flex-col lg:py-0 py-10">
         <div className="flex-1 flex items-center justify-center">
           <img src={AboutBanner} />
         </div>
         <div className="flex-1 flex flex-col justify-center">
-          <h1 className="text-4xl font-bold mb-1">Our Story</h1>
-          <p className="leading-loose mb-2">
+          <h1 className="text-4xl font-bold mb-1 lg:px-0 px-5">Our Story</h1>
+          <p className="leading-loose mb-2 lg:px-0 px-5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor <br></br>
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -22,7 +22,7 @@ const About = () => {
             exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat.
           </p>
-          <p className="leading-loose">
+          <p className="leading-loose lg:px-0 px-5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor <br></br>
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -32,11 +32,11 @@ const About = () => {
         </div>
       </section>
       <section className="py-10">
-        <h1 className="text-center text-3xl font-bold">
+        <h1 className="text-center text-3xl font-bold lg:px-0 px-5">
           Our Mission & Work Process
         </h1>
         <p className="text-center">Professional & Dedicated Team</p>
-        <div className="flex  px-48 mt-20">
+        <div className="flex lg:flex-row flex-col px-5 lg:px-48 mt-20">
           <div className="flex-1">
             <div className="flex py-5 px-5 shadow-lg rounded mb-5">
               <div>
