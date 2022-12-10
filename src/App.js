@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./components/Auth/Login";
 import About from "./components/About/About";
 import MobileMenu from "./components/Navigation/MobileMenu";
+import Dashboard from "./components/Dashboard/dashboard";
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/aboutus" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
         {
           showLogin && <Login setShowLogin={setShowLogin} />

@@ -1,6 +1,7 @@
 import React from "react";
 import { stats } from "../Data/util";
 import Footer from "../Navigation/footer";
+import CountUp from "react-countup"
 
 const Home = () => {
   return (
@@ -126,7 +127,7 @@ const HomeStates = ({ number, content, color }) => {
       className={`-bg-blue-${color} lg:mr-3 opacity-75 lg:w-64 rounded-md flex flex-col px-5 py-2 `}
     >
       <div className="text-3xl font-bold p-0 text-gray-800 flex items-center justify-center">
-        {number}+
+        <CountUp  end={number}/>+
       </div>
       <div className="text-gray-800  p-0 font-light h-full text-lg flex justify-center items-center">
         {content}

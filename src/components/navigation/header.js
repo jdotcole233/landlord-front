@@ -70,7 +70,7 @@ const Header = ({ setShowLogin, setShowMobileMenu }) => {
         </div>
 
         {/* Mobile Menu */}
-        <div onClick={() => setShowMobileMenu(true)} >
+        <div className="lg:hidden" onClick={() => setShowMobileMenu(true)} >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

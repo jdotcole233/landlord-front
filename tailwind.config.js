@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'landingBanner': "url('assets/images/banner-1.jpg')"
+        'landingBanner': "url('assets/images/banner-1.jpg')",
+        'profilePicture': "url('assets/images/avatar.png')"
       }
     },
   },
