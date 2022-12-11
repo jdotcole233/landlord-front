@@ -5,6 +5,7 @@ import { rooms } from "../../../Data/util";
 import Footer from "../../../Navigation/footer";
 import RoomCard from "./RoomCard";
 import SearchBar from "../../Dashboard/SearchBar";
+import MobileDashbaordNavigation from "../../Navigation/MobileDashboardNavigation";
 
 const Rooms = () => {
   const history = useNavigate();
@@ -13,10 +14,10 @@ const Rooms = () => {
 
   return (
     <>
-      <div className="bg-[#F5FAFF] h-screen px-10 py-20 flex justify-start items-start overflow-y-scroll">
+      <div className="bg-[#F5FAFF] h-screen lg:px-10 lg:py-20 px-2 py-5 flex lg:flex-row flex-col justify-start items-start overflow-y-scroll">
         <DashboardNavigation />
-
-        <section className="w-full ml-10 px-10 py-10 bg-white rounded-md shadow-md">
+        <MobileDashbaordNavigation />
+        <section className="w-full lg:ml-10 lg:px-10 lg:py-10 py-5 px-2 bg-white rounded-md shadow-md">
           <div className="flex justify-between pr-5">
             <h1 className="text-2xl font-bold text-gray-600">Rooms</h1>
             <Link to="/addRoom" className="flex hover:bg-blue-700 hover:shadow-2xl bg-blue-500 px-4 py-1 justify-center items-center rounded-full text-white font-semibold">
@@ -48,7 +49,7 @@ const Rooms = () => {
             <span className="mr-1 font-bold text-blue-400">Rooms</span>
           </div>
           <SearchBar name="room" />
-          <div className="grid grid-cols-4 gap-3 mt-3">
+          <div className="lg:grid lg:grid-cols-4 lg:gap-3 mt-3">
             {rooms.map((room, key) => (
               <RoomCard key={key} {...room} />
             ))}

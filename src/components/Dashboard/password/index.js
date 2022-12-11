@@ -1,13 +1,16 @@
 import React from "react";
 import Footer from "../../Navigation/footer";
 import DashboardNavigation from "../Navigation";
+import MobileDashbaordNavigation from "../Navigation/MobileDashboardNavigation";
 
 const ChangePassword = () => {
   return (
     <>
-    <div className="bg-[#F5FAFF] h-screen px-10 py-20 flex justify-start items-start">
+    <div className="bg-[#F5FAFF] h-screen lg:px-10 lg:py-20 py-5 px-2 flex  lg:flex-row flex-col justify-start items-start">
       <DashboardNavigation />
-      <section className="ml-10 w-full bg-white px-10 py-10">
+      <MobileDashbaordNavigation />
+
+      <section className="lg:ml-10 w-full bg-white lg:px-10 lg:py-10 px-2 py-5">
         <h1 className="text-3xl font-bold mb-2">Change Your Password</h1>
         <div>
           <div className=" flex-col">
@@ -37,7 +40,7 @@ const ChangePassword = () => {
             </div>
           </div>
           <div>
-            <button className="bg-blue-400 border-2 hover:bg-blue-700 hover:shadow-2xl border-blue-500 text-white px-10 py-3 rounded mt-5 text-lg">
+            <button className="bg-blue-400 border-2 hover:bg-blue-700 hover:shadow-2xl border-blue-500 text-white lg:px-10 lg:py-3 px-2 rounded mt-5 text-lg">
               Save Changes
             </button>
           </div>

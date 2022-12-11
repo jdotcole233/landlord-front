@@ -4,13 +4,15 @@ import { properties } from "../../Data/util";
 import { Link } from "react-router-dom";
 import Footer from "../../Navigation/footer";
 import SearchBar from "../Dashboard/SearchBar";
+import MobileDashbaordNavigation from "../Navigation/MobileDashboardNavigation";
 
 const MyProperties = () => {
   return (
     <div>
-      <div className="bg-[#F5FAFF] h-screen px-10 py-20 flex justify-start items-start overflow-scroll">
+      <div className="bg-[#F5FAFF] h-screen px-2 lg:px-10 py-5 lg:py-20 flex lg:flex-row flex-col justify-start items-start overflow-scroll">
         <DashboardNavigation />
-        <section className="ml-10 bg-white w-full px-10 py-10 rounded-md shadow-md">
+        <MobileDashbaordNavigation />
+        <section className="lg:ml-10 bg-white w-full lg:px-10 lg:py-10 py-5 px-2 rounded-md shadow-md">
           <div className="flex justify-between pr-5">
             <h1 className="text-2xl font-bold text-gray-600">My Property</h1>
             <Link
@@ -35,7 +37,7 @@ const MyProperties = () => {
             </Link>
           </div>
           <SearchBar name="apartment" />
-          <div className="grid grid-cols-4 gap-3 mt-5 ">
+          <div className="lg:grid lg:grid-cols-4 lg:gap-3 mt-5 ">
             {properties.map((property, key) => (
               <Property key={key} {...property} />
             ))}
@@ -49,7 +51,7 @@ const MyProperties = () => {
 
 const Property = ({ apartment_name, image, location }) => {
   return (
-    <div className="border shadow-md rounded-md">
+    <div className="border lg:mb-0 mb-5 shadow-md rounded-md">
       <div
         className={`bg-[url('https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070_960_720.jpg')] bg-cover object-contain bg-no-repeat border w-full h-48 `}
       ></div>

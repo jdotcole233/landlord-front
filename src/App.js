@@ -1,4 +1,4 @@
-import { useState,  } from "react";
+import { useState, useContext } from "react";
 import Home from "./components/Home";
 import Contact from "./components/Contact/Contact";
 import Header from "./components/Navigation/header";
@@ -16,11 +16,14 @@ import Tenant from "./components/Dashboard/Tenant";
 import ApartmentForm from "./components/Dashboard/properties/Apartment";
 import RoomForm from "./components/Dashboard/properties/Rooms/RoomForm";
 import TenantForm from "./components/Dashboard/Tenant/TenantForm";
+import AppContext from "./components/Context/Context"
+import MobileDashboardMenu from "./components/Dashboard/Navigation/MobileDashboardMenu";
 
 function App() {
 
   const [showLogin, setShowLogin] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const { mobileMenu } = useContext(AppContext);
 
   return (
     <>
@@ -46,6 +49,9 @@ function App() {
         }
         {
           showMobileMenu && <MobileMenu setShowLogin={setShowLogin} setShowMobileMenu={setShowMobileMenu} />
+        }
+        {
+          mobileMenu && <MobileDashboardMenu />
         }
       </div>
     </>

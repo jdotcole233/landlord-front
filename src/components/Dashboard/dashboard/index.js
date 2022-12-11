@@ -3,16 +3,20 @@ import CountUp from "react-countup";
 import Footer from "../../Navigation/footer";
 import DashboardNavigation from "../Navigation";
 import { Link } from "react-router-dom"
+import MobileDashbaordNavigation from "../Navigation/MobileDashboardNavigation";
+import DataTable from "react-data-table-component"
+import { rooms, tenantsColumns } from "../../Data/util"
 
 const Dashboard = () => {
   return (
     <>
-    <div className="bg-[#F5FAFF] h-screen px-10 py-20 flex justify-start items-start">
+    <div className="bg-[#F5FAFF] lg:h-screen  px-2 lg:px-10 py-5 lg:py-20 flex lg:flex-row flex-col justify-start items-start">
       <DashboardNavigation />
+      <MobileDashbaordNavigation />
       {/* Dashboard content */}
-      <section className="ml-10 w-full">
-        <div className="grid grid-cols-3 gap-4">
-          <div className="border w-96  h-40 rounded bg-green-300 shadow-md flex">
+      <section className="lg:ml-10 w-full">
+        <div className="lg:grid lg:grid-cols-3 lg:gap-4 flex flex-col">
+          <div className="border w-96 lg:mb-0 mb-5  h-40 rounded bg-green-300 shadow-md flex">
             <div className="flex-1 flex flex-col justify-center px-10">
               <h1 className="text-7xl font-bold text-white">
                 <CountUp end={244} />
@@ -42,7 +46,7 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className="border w-96  h-40 rounded bg-orange-400 shadow-md flex">
+          <div className="border w-96 lg:mb-0 mb-5  h-40 rounded bg-orange-400 shadow-md flex">
             <div className="flex-1 flex flex-col justify-center px-10">
               <h1 className="text-7xl font-bold text-white">
                 <CountUp end={10} />
@@ -72,7 +76,7 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className="border w-96  h-40 rounded bg-blue-900 shadow-md flex">
+          <div className="border w-96 lg:mb-0 mb-5  h-40 rounded bg-blue-900 shadow-md flex">
             <div className="flex-1 flex flex-col justify-center px-10">
               <h1 className="text-7xl font-bold text-white">
                 <CountUp end={20} />
@@ -97,7 +101,7 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className="border w-96  h-40 rounded bg-rose-500 shadow-md flex">
+          <div className="border w-96 lg:mb-0 mb-5  h-40 rounded bg-rose-500 shadow-md flex">
             <div className="flex-1 flex flex-col justify-center px-10">
               <h1 className="text-7xl font-bold text-white">
                 <CountUp end={2} />
@@ -129,7 +133,7 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className="border w-96  h-40 rounded bg-fuchsia-600 shadow-md flex">
+          <div className="border w-96 lg:mb-0 mb-5  h-40 rounded bg-fuchsia-600 shadow-md flex">
             <div className="flex-1 flex flex-col justify-center px-10">
               <h1 className="text-7xl font-bold text-white">
                 <CountUp end={45} />
@@ -159,7 +163,7 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className="border w-96  h-40 rounded bg-blue-500 shadow-md flex">
+          <div className="border w-96 lg:mb-0 mb-5  h-40 rounded bg-blue-500 shadow-md flex">
             <div className="flex-1 flex flex-col justify-center px-10">
               <h1 className="text-7xl font-bold text-white">
                 <CountUp end={1500} />
@@ -191,9 +195,10 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
+
         <div className="mt-10 bg-white px-5 py-7 shadow-md">
-          <div className="flex justify-between pr-5">
-            <h1 className="text-2xl font-bold text-gray-600">
+          <div className="flex justify-between lg:pr-5">
+            <h1 className="lg:text-2xl font-bold text-gray-600">
               List of upcoming renewals
             </h1>
             <Link to="/addApartment" className="flex hover:bg-blue-700 hover:shadow-2xl bg-blue-500 px-3 py-1 justify-center items-center rounded-full text-white font-semibold">
@@ -214,136 +219,12 @@ const Dashboard = () => {
               <span className="ml-2">Apartment</span>
             </Link>
           </div>
-          <table className=" tbale-auto  mt-7 w-full">
-            <thead className="">
-              <th className="text-left font-bold px-1 text-lg">Full Name</th>
-              <th className="text-left font-bold px-1 text-lg">Apartment</th>
-              <th className="text-left font-bold px-1 text-lg">Location</th>
-              <th className="text-left font-bold px-1 text-lg">Room Name</th>
-              <th className="text-left font-bold px-1 text-lg">Currency</th>
-              <th className="text-left font-bold px-1 text-lg">Monthly Rent</th>
-              <th className="text-left font-bold px-1 text-lg">
-                Tenancy End Date
-              </th>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  Cole Baidoo
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  Agbogba House
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  Abokobi Road
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  Room 6
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  GHS
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  1800
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  December 28, 2023{" "}
-                </td>
-              </tr>
-              <tr>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  Cole Baidoo
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  Agbogba House
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  Abokobi Road
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  Room 6
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  GHS
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  1800
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  December 28, 2023{" "}
-                </td>
-              </tr>
-              <tr>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  Cole Baidoo
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  Agbogba House
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  Abokobi Road
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  Room 6
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  GHS
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  1800
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  December 28, 2023{" "}
-                </td>
-              </tr>
-              <tr>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  Cole Baidoo
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  Agbogba House
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  Abokobi Road
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  Room 6
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  GHS
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  1800
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  December 28, 2023{" "}
-                </td>
-              </tr>
-              <tr>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  Cole Baidoo
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  Agbogba House
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  Abokobi Road
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  Room 6
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  GHS
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  1800
-                </td>
-                <td className="px-2 py-2 border-b border-b-slate-100 font-extralight">
-                  December 28, 2023{" "}
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div>
+            <DataTable 
+              columns={tenantsColumns}
+              data={rooms[0].tenant}
+            />
+          </div>
         </div>
       </section>
     </div>
@@ -351,5 +232,6 @@ const Dashboard = () => {
     </>
   );
 };
+
 
 export default Dashboard;

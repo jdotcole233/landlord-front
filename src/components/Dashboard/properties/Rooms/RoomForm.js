@@ -1,17 +1,18 @@
 import DashboardNavigation from "../../Navigation";
 import { useNavigate } from "react-router-dom";
-
+import Footer from "../../../Navigation/footer";
+import MobileDashbaordNavigation from "../../Navigation/MobileDashboardNavigation";
 
 const RoomForm = () => {
+  const history = useNavigate();
 
-    const history = useNavigate()
-
-    return (
-        <div className="bg-[#F5FAFF] h-screen px-10 py-20 flex justify-start items-start overflow-scroll">
+  return (
+    <>
+      <div className="bg-[#F5FAFF] h-screen lg:px-10 lg:py-20 flex lg:flex-row flex-col justify-start items-start overflow-scroll">
         <DashboardNavigation />
-  
+        <MobileDashbaordNavigation />
         {/* Forms */}
-        <section className="px-10 py-10 bg-white rounded w-full ml-10">
+        <section className="lg:px-10 lg:py-10 py-5 px-2 bg-white rounded w-full lg:ml-10">
           <div className="flex items-center justify-between">
             <h1 className="font-bold text-3xl mb-4">Basic Information</h1>
             <svg
@@ -55,7 +56,9 @@ const RoomForm = () => {
           </div>
         </section>
       </div>
-    )
-}
+      <Footer />
+    </>
+  );
+};
 
 export default RoomForm;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Footer from "../../../Navigation/footer";
 import DashboardNavigation from "../../Navigation";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { rooms } from "../../../Data/util";
 import RoomCard from "./RoomCard";
 import moment from "moment";
@@ -10,18 +10,20 @@ import { tenantsColumns } from "../../../Data/util";
 import CurrentTenant from "../../Tenant/CurrentTenant";
 import PreviousTenant from "../../Tenant/PreviousTenant";
 import AllTenant from "../../Tenant/AllTenants";
+import MobileDashbaordNavigation from "../../Navigation/MobileDashboardNavigation";
 
 const Room = () => {
   const history = useNavigate();
   const [tabs, setTabs] = useState(1);
   return (
     <>
-      <div className="bg-[#F5FAFF] h-screen px-10 py-20 flex justify-start items-start overflow-y-scroll">
+      <div className="bg-[#F5FAFF] h-screen lg:px-10 lg:py-20 py-5 px-2 flex lg:flex-flow flex-col justify-start items-start overflow-y-scroll">
         <DashboardNavigation />
-        <div className="ml-10 w-full px-10 py-10 bg-white">
+        <MobileDashbaordNavigation />
+        <div className="lg:ml-10 w-full lg:px-10 lg:py-10 py-5 px-2 bg-white">
           <div className="flex justify-between pr-5">
             <h1 className="text-2xl font-bold text-gray-600">Room</h1>
-            <button className="flex bg-blue-500 px-2 py-1 justify-center items-center rounded-full text-white font-semibold">
+            <Link to="/addTenant" className="flex bg-blue-500 px-3 py-1 justify-center items-center rounded-full text-white font-semibold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -36,8 +38,8 @@ const Room = () => {
                   d="M12 4.5v15m7.5-7.5h-15"
                 />
               </svg>
-              <span>Tenant</span>
-            </button>
+              <span className="ml-2">Tenant</span>
+            </Link>
           </div>
 
           <div className="mt-2 text-sm">
@@ -60,7 +62,7 @@ const Room = () => {
             </span>
           </div>
 
-          <div className="flex mt-5">
+          <div className="flex lg:flex-row flex-col mt-5">
             <RoomCard {...rooms[0]} />
             <div className="ml-4 flex-1 flex flex-col ">
               <div className="flex w-full shadow-md rounded-full">
@@ -70,7 +72,7 @@ const Room = () => {
                     tabs == 1
                       ? " bg-blue-400 text-blue-700 border rounded-full shadow-lg font-bold"
                       : "font-light"
-                  } text-center cursor-pointer  py-1 shadow-sm `}
+                  } text-center lg:text-sm text-xs cursor-pointer  py-2 shadow-sm `}
                 >
                   Current Tenant
                 </div>
@@ -80,7 +82,7 @@ const Room = () => {
                     tabs == 2
                       ? " bg-blue-400 text-blue-700 border rounded-full shadow-lg font-bold"
                       : "font-light"
-                  } text-center cursor-pointer  py-1 shadow-sm `}
+                  } text-center lg:text-sm text-xs cursor-pointer  py-2 shadow-sm `}
                 >
                   Previous Tenants
                 </div>
@@ -90,7 +92,7 @@ const Room = () => {
                     tabs == 3
                       ? " bg-blue-400 text-blue-700 border rounded-full shadow-lg font-bold"
                       : "font-light"
-                  } text-center cursor-pointer  py-1 shadow-sm `}
+                  } text-center lg:text-sm text-xs cursor-pointer  py-2 shadow-sm `}
                 >
                   All Tenants
                 </div>

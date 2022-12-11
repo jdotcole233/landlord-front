@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const RoomCard = ({ room_name, room_number, image, tenant }) => {
     return (
-      <div className="border shadow-xl">
+      <div className="border shadow-xl lg:mb-0 mb-5">
         <div className=" bg-[url('https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_960_720.jpg')] bg-cover bg-no-repeat h-44"></div>
         <div className="px-3">
           <h1 className="text-blue-700 font-bold text-lg">

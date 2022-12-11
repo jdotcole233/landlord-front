@@ -5,9 +5,9 @@ const CurrentTenant = () => {
     const [showMore, setShowMore] = useState(false);
   
     return (
-      <div className="flex mt-5">
-        <div className="border w-72 mt-2 shadow-lg rounded-xl">
-          <div className="bg-[url('https://cdn.pixabay.com/photo/2012/04/13/21/07/user-33638_960_720.png')] h-56  bg-cover object-cover"></div>
+      <div className="flex lg:flex-row flex-col lg:justify-start justify-center lg:items-start items-center mt-5">
+        <div className="border lg:w-72 w-full mt-2 shadow-lg rounded-xl">
+          <div className="bg-[url('https://cdn.pixabay.com/photo/2012/04/13/21/07/user-33638_960_720.png')] h-56 bg-contain bg-no-repeat bg-center  lg:bg-contain object-cover"></div>
           <div className="px-3 py-2">
             <h1 className="text-blue-500">
               <span className="text-gray-500 mr-1">Name:</span> Cole Baidoo
@@ -48,7 +48,7 @@ const CurrentTenant = () => {
         </div>
   
         {/* More */}
-        <div className={`${showMore ? 'flex' : 'hidden'} ml-5 border px-5 py-4 w-72 shadow-lg cursor-pointer flex flex-col justify-between rounded-xl mt-3`}>
+        <div className={`${showMore ? 'flex' : 'hidden'} lg:ml-5 border px-5 py-4  w-full lg:w-72 shadow-lg cursor-pointer flex flex-col justify-between rounded-xl mt-3`}>
           <div>
             <h1 className="font-bold text-xl">Rent Details</h1>
             <h1 className="text-blue-500">

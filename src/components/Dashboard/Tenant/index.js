@@ -6,15 +6,19 @@ import CurrentTenant from "./CurrentTenant";
 import PreviousTenant from "./PreviousTenant";
 import AllTenant from "./AllTenants";
 import { Link } from "react-router-dom";
+import MobileDashbaordNavigation from "../Navigation/MobileDashboardNavigation";
+import Footer from "../../Navigation/footer";
 
 
 const Tenant = () => {
     const [tabs, setTabs] = useState(1);
 
   return (
-    <div className="bg-[#F5FAFF] h-screen px-10 py-20 flex justify-start items-start overflow-scroll">
+    <>
+    <div className="bg-[#F5FAFF] h-screen lg:px-10 lg:py-20 px-2 py-5 flex lg:flex-row flex-col justify-start items-start overflow-scroll">
       <DashboardNavigation />
-      <section className="border ml-10 w-full px-10 py-10 bg-white">
+      <MobileDashbaordNavigation />
+      <section className="border lg:ml-10 w-full lg:px-10 lg:py-10 py-5 px-2 bg-white">
         <div className="flex justify-between pr-5">
           <h1 className="text-2xl font-bold text-gray-600">My Tenants</h1>
           <Link to="/addTenant" className="flex hover:bg-blue-700 hover:shadow-2xl bg-blue-500 px-3 py-1 justify-center items-center rounded-full text-white font-semibold">
@@ -37,7 +41,7 @@ const Tenant = () => {
         </div>
         <div>
 
-        <div className="ml-4 flex-1 flex flex-col mt-5">
+        <div className="lg:ml-4 flex-1 flex flex-col mt-5">
           <div className="flex w-full shadow-md rounded-full">
             <div
               onClick={() => setTabs(1)}
@@ -45,7 +49,7 @@ const Tenant = () => {
                 tabs == 1
                   ? " bg-blue-400 text-blue-700 border rounded-full shadow-lg font-bold"
                   : "font-light"
-              } text-center cursor-pointer  py-1 shadow-sm `}
+              } text-center lg:text-sm text-xs cursor-pointer  py-2 shadow-sm `}
             >
               Current Tenant
             </div>
@@ -55,7 +59,7 @@ const Tenant = () => {
                 tabs == 2
                   ? " bg-blue-400 text-blue-700 border rounded-full shadow-lg font-bold"
                   : "font-light"
-              } text-center cursor-pointer  py-1 shadow-sm `}
+              } text-center lg:text-sm text-xs cursor-pointer  py-2 shadow-sm `}
             >
               Previous Tenants
             </div>
@@ -65,7 +69,7 @@ const Tenant = () => {
                 tabs == 3
                   ? " bg-blue-400 text-blue-700 border rounded-full shadow-lg font-bold"
                   : "font-light"
-              } text-center cursor-pointer  py-1 shadow-sm `}
+              } text-center lg:text-sm text-xs cursor-pointer  py-2 shadow-sm `}
             >
               All Tenants
             </div>
@@ -87,9 +91,9 @@ const Tenant = () => {
 
       </div>
       </section>
-
-      
     </div>
+    <Footer />
+    </>
   );
 };
 
