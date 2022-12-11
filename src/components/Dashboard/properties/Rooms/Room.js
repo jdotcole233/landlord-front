@@ -17,7 +17,7 @@ const Room = () => {
   const [tabs, setTabs] = useState(1);
   return (
     <>
-      <div className="bg-[#F5FAFF] h-screen lg:px-10 lg:py-20 py-5 px-2 flex lg:flex-flow flex-col justify-start items-start overflow-y-scroll">
+      <div className="bg-[#F5FAFF] h-screen lg:px-10 lg:py-20 py-5 px-2 flex lg:flex-row flex-col justify-start items-start overflow-y-scroll">
         <DashboardNavigation />
         <MobileDashbaordNavigation />
         <div className="lg:ml-10 w-full lg:px-10 lg:py-10 py-5 px-2 bg-white">
