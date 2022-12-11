@@ -2,6 +2,7 @@ import React from "react";
 import CountUp from "react-countup";
 import Footer from "../../Navigation/footer";
 import DashboardNavigation from "../Navigation";
+import { Link } from "react-router-dom"
 
 const Dashboard = () => {
   return (
@@ -195,7 +196,7 @@ const Dashboard = () => {
             <h1 className="text-2xl font-bold text-gray-600">
               List of upcoming renewals
             </h1>
-            <button className="flex bg-blue-500 px-2 py-1 justify-center items-center rounded-full text-white font-semibold">
+            <Link to="/addApartment" className="flex hover:bg-blue-700 hover:shadow-2xl bg-blue-500 px-3 py-1 justify-center items-center rounded-full text-white font-semibold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -210,8 +211,8 @@ const Dashboard = () => {
                   d="M12 4.5v15m7.5-7.5h-15"
                 />
               </svg>
-              <span>Apartment</span>
-            </button>
+              <span className="ml-2">Apartment</span>
+            </Link>
           </div>
           <table className=" tbale-auto  mt-7 w-full">
             <thead className="">

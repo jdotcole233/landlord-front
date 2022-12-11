@@ -5,7 +5,7 @@ const CurrentTenant = () => {
     const [showMore, setShowMore] = useState(false);
   
     return (
-      <div className="flex">
+      <div className="flex mt-5">
         <div className="border w-72 mt-2 shadow-lg rounded-xl">
           <div className="bg-[url('https://cdn.pixabay.com/photo/2012/04/13/21/07/user-33638_960_720.png')] h-56  bg-cover object-cover"></div>
           <div className="px-3 py-2">

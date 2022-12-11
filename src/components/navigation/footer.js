@@ -24,7 +24,7 @@ const Footer = () => {
       <div className="w-screen bg-gray-700 py-2 lg:py-0 lg:h-80 flex lg:flex-row flex-col justify-center items-center">
         <div className="lg:mr-10 lg:mb-0 mb-10 lg:mt-0 mt-10">
           <Link to="/" className="text-6xl font-extrabold text-white mb-3">
-            <span className="text-blue-300">Ex-</span>LandLord
+            <span className="text-blue-300">Xp-</span>LandLord
           </Link>
           <div className="flex flex-col  text-gray-300">
             <span className="mb-2">P.O.Box AQ 249, Abokobi-Accra</span>

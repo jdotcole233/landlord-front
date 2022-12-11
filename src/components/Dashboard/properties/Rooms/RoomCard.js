@@ -35,7 +35,7 @@ const RoomCard = ({ room_name, room_number, image, tenant }) => {
           </h1>
         </div>
         <div className="flex px-2 py-2">
-          <span className="border bg-slate-700 cursor-pointer px-2 rounded flex justify-center items-center py-1 text-white mr-1">
+          <Link to="/addRoom" className="border hover:shadow-lg hover:bg-slate-900 bg-slate-700 cursor-pointer px-2 rounded flex justify-center items-center py-1 text-white mr-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -50,10 +50,10 @@ const RoomCard = ({ room_name, room_number, image, tenant }) => {
                 d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
               />
             </svg>
-          </span>
+          </Link>
           <Link
             to="/room"
-            className="border bg-slate-700 cursor-pointer px-2 rounded flex justify-center items-center py-1 text-white mr-1"
+            className="border hover:shadow-lg hover:bg-slate-900 bg-slate-700 cursor-pointer px-2 rounded flex justify-center items-center py-1 text-white mr-1"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@ const RoomCard = ({ room_name, room_number, image, tenant }) => {
               />
             </svg>
           </Link>
-          <span className="border bg-slate-700 cursor-pointer px-2 rounded flex justify-center items-center py-1 text-red-500">
+          <span className="border hover:shadow-lg hover:bg-slate-900 bg-slate-700 cursor-pointer px-2 rounded flex justify-center items-center py-1 text-red-500">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

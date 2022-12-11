@@ -5,6 +5,7 @@ import { tenantsColumns } from "../../Data/util";
 import CurrentTenant from "./CurrentTenant";
 import PreviousTenant from "./PreviousTenant";
 import AllTenant from "./AllTenants";
+import { Link } from "react-router-dom";
 
 
 const Tenant = () => {
@@ -16,7 +17,7 @@ const Tenant = () => {
       <section className="border ml-10 w-full px-10 py-10 bg-white">
         <div className="flex justify-between pr-5">
           <h1 className="text-2xl font-bold text-gray-600">My Tenants</h1>
-          <button className="flex bg-blue-500 px-2 py-1 justify-center items-center rounded-full text-white font-semibold">
+          <Link to="/addTenant" className="flex hover:bg-blue-700 hover:shadow-2xl bg-blue-500 px-3 py-1 justify-center items-center rounded-full text-white font-semibold">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -31,8 +32,8 @@ const Tenant = () => {
                 d="M12 4.5v15m7.5-7.5h-15"
               />
             </svg>
-            <span>Tenant</span>
-          </button>
+            <span className="ml-2">Tenant</span>
+          </Link>
         </div>
         <div>
 

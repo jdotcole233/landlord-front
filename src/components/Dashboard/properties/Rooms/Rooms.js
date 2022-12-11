@@ -1,9 +1,10 @@
 import React from "react";
-import DashboardNavigation from "../Navigation";
+import DashboardNavigation from "../../Navigation";
 import { Link, useNavigate } from "react-router-dom";
-import { rooms } from "../../Data/util";
-import Footer from "../../Navigation/footer";
+import { rooms } from "../../../Data/util";
+import Footer from "../../../Navigation/footer";
 import RoomCard from "./RoomCard";
+import SearchBar from "../../Dashboard/SearchBar";
 
 const Rooms = () => {
   const history = useNavigate();
@@ -18,7 +19,7 @@ const Rooms = () => {
         <section className="w-full ml-10 px-10 py-10 bg-white rounded-md shadow-md">
           <div className="flex justify-between pr-5">
             <h1 className="text-2xl font-bold text-gray-600">Rooms</h1>
-            <button className="flex bg-blue-500 px-2 py-1 justify-center items-center rounded-full text-white font-semibold">
+            <Link to="/addRoom" className="flex hover:bg-blue-700 hover:shadow-2xl bg-blue-500 px-4 py-1 justify-center items-center rounded-full text-white font-semibold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -33,8 +34,8 @@ const Rooms = () => {
                   d="M12 4.5v15m7.5-7.5h-15"
                 />
               </svg>
-              <span>Room</span>
-            </button>
+              <span className="ml-2">Room</span>
+            </Link>
           </div>
           <div className="mt-2 text-sm">
             <span
@@ -46,7 +47,7 @@ const Rooms = () => {
             <span className="mr-1 font-bold text-blue-400">/</span>
             <span className="mr-1 font-bold text-blue-400">Rooms</span>
           </div>
-
+          <SearchBar name="room" />
           <div className="grid grid-cols-4 gap-3 mt-3">
             {rooms.map((room, key) => (
               <RoomCard key={key} {...room} />

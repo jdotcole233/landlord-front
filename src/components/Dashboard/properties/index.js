@@ -3,6 +3,7 @@ import DashboardNavigation from "../Navigation";
 import { properties } from "../../Data/util";
 import { Link } from "react-router-dom";
 import Footer from "../../Navigation/footer";
+import SearchBar from "../Dashboard/SearchBar";
 
 const MyProperties = () => {
   return (
@@ -12,7 +13,10 @@ const MyProperties = () => {
         <section className="ml-10 bg-white w-full px-10 py-10 rounded-md shadow-md">
           <div className="flex justify-between pr-5">
             <h1 className="text-2xl font-bold text-gray-600">My Property</h1>
-            <button className="flex bg-blue-500 px-2 py-1 justify-center items-center rounded-full text-white font-semibold">
+            <Link
+              to="/addApartment"
+              className="flex hover:bg-blue-700 hover:shadow-2xl bg-blue-500 px-3 py-1 justify-center items-center rounded-full text-white font-semibold"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -27,9 +31,10 @@ const MyProperties = () => {
                   d="M12 4.5v15m7.5-7.5h-15"
                 />
               </svg>
-              <span>Apartment</span>
-            </button>
+              <span className="ml-2">Apartment</span>
+            </Link>
           </div>
+          <SearchBar name="apartment" />
           <div className="grid grid-cols-4 gap-3 mt-5 ">
             {properties.map((property, key) => (
               <Property key={key} {...property} />
@@ -65,7 +70,10 @@ const Property = ({ apartment_name, image, location }) => {
         </h1>
       </div>
       <div className="flex px-2 py-2">
-        <span className="border bg-slate-700 cursor-pointer px-2 rounded flex justify-center items-center py-1 text-white mr-1">
+        <Link
+          to="/addApartment"
+          className="border hover:shadow-lg hover:bg-slate-900 bg-slate-700 cursor-pointer px-2 rounded flex justify-center items-center py-1 text-white mr-1"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -80,10 +88,10 @@ const Property = ({ apartment_name, image, location }) => {
               d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
             />
           </svg>
-        </span>
+        </Link>
         <Link
           to="/rooms"
-          className="border bg-slate-700 cursor-pointer px-2 rounded flex justify-center items-center py-1 text-white mr-1"
+          className="border bg-slate-700 hover:shadow-lg hover:bg-slate-900 cursor-pointer px-2 rounded flex justify-center items-center py-1 text-white mr-1"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +113,7 @@ const Property = ({ apartment_name, image, location }) => {
             />
           </svg>
         </Link>
-        <span className="border bg-slate-700 cursor-pointer px-2 rounded flex justify-center items-center py-1 text-red-500">
+        <span className="border bg-slate-700 cursor-pointer hover:shadow-lg hover:bg-slate-900 px-2 rounded flex justify-center items-center py-1 text-red-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

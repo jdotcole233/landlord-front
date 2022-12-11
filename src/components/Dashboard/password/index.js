@@ -37,7 +37,7 @@ const ChangePassword = () => {
             </div>
           </div>
           <div>
-            <button className="bg-blue-400 border-2 border-blue-500 text-white px-10 py-3 rounded mt-5 text-lg">
+            <button className="bg-blue-400 border-2 hover:bg-blue-700 hover:shadow-2xl border-blue-500 text-white px-10 py-3 rounded mt-5 text-lg">
               Save Changes
             </button>
           </div>

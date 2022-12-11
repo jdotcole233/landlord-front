@@ -6,13 +6,16 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./components/Auth/Login";
 import About from "./components/About/About";
 import MobileMenu from "./components/Navigation/MobileMenu";
-import Dashboard from "./components/Dashboard/dashboard";
+import Dashboard from "./components/Dashboard/Dashboard";
 import Profile from "./components/Dashboard/profile";
 import ChangePassword from "./components/Dashboard/password";
 import MyProperties from "./components/Dashboard/properties";
-import Rooms from "./components/Dashboard/properties/Rooms";
-import Room from "./components/Dashboard/properties/Room";
+import Rooms from "./components/Dashboard/properties/Rooms/Rooms";
+import Room from "./components/Dashboard/properties/Rooms/Room";
 import Tenant from "./components/Dashboard/Tenant";
+import ApartmentForm from "./components/Dashboard/properties/Apartment";
+import RoomForm from "./components/Dashboard/properties/Rooms/RoomForm";
+import TenantForm from "./components/Dashboard/Tenant/TenantForm";
 
 function App() {
 
@@ -34,6 +37,9 @@ function App() {
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/room" element={<Room />} />
           <Route path="/tenants" element={<Tenant />} />
+          <Route path="/addApartment" element={<ApartmentForm />} />
+          <Route path="/addRoom" element={<RoomForm />} />
+          <Route path="/addTenant" element={<TenantForm />} />
         </Routes>
         {
           showLogin && <Login setShowLogin={setShowLogin} />

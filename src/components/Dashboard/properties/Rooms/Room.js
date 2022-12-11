@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import Footer from "../../Navigation/footer";
-import DashboardNavigation from "../Navigation";
+import Footer from "../../../Navigation/footer";
+import DashboardNavigation from "../../Navigation";
 import { useNavigate } from "react-router-dom";
-import { rooms } from "../../Data/util";
+import { rooms } from "../../../Data/util";
 import RoomCard from "./RoomCard";
 import moment from "moment";
 import DataTable from "react-data-table-component"
-import { tenantsColumns } from "../../Data/util";
-import CurrentTenant from "../Tenant/CurrentTenant";
-import PreviousTenant from "../Tenant/PreviousTenant";
-import AllTenant from "../Tenant/AllTenants";
+import { tenantsColumns } from "../../../Data/util";
+import CurrentTenant from "../../Tenant/CurrentTenant";
+import PreviousTenant from "../../Tenant/PreviousTenant";
+import AllTenant from "../../Tenant/AllTenants";
 
 const Room = () => {
   const history = useNavigate();

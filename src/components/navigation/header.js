@@ -10,7 +10,7 @@ const Header = ({ setShowLogin, setShowMobileMenu }) => {
           to="/"
           className="lg:text-6xl text-2xl font-extrabold text-blue-800 md:mr-3"
         >
-          <span className="text-blue-300">Ex-</span>LandLord
+          <span className="text-blue-300">Xp-</span>LandLord
         </Link>
         <div className="hidden lg:flex flex-1 justify-end mr-4">
           <ul className="flex justify-around text-md w-64 text-blue-700">
@@ -27,7 +27,7 @@ const Header = ({ setShowLogin, setShowMobileMenu }) => {
         </div>
         <div className="hidden lg:flex mr-2">
           <Link
-            to="/signup"
+            to="/"
             className="text-green-400  font-semibold  px-8 text-lg  mr-2 py-1 flex items-center "
           >
             <svg
