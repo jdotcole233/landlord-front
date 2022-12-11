@@ -1,11 +1,13 @@
 import React from "react";
 
-const Login = ({ setShowLogin }) => {
+const Login = ({ ref, setShowLogin }) => {
+
   return (
     <div
       style={{
         backgroundColor: "rgba(0, 0, 0, 0.7)",
       }}
+      id="enabled"
       className="w-full h-screen  absolute top-0 bottom-0 flex justify-center items-center"
     >
       <div className="lg:w-3/12   bg-white rounded-md px-10 pb-6 pt-4">

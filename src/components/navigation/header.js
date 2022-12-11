@@ -5,7 +5,7 @@ const Header = ({ setShowLogin, setShowMobileMenu }) => {
   return (
     <>
       {/* Top Navigation */}
-      <section className="w-screen bg-neutral-50 flex justify-between lg:justify-around h-20 px-5 lg:px-20 items-center">
+      <section className="w-screen font-robotLight bg-neutral-50 flex justify-between lg:justify-around h-20 px-5 lg:px-20 items-center">
         <Link
           to="/"
           className="lg:text-6xl text-2xl font-extrabold text-blue-800 md:mr-3"

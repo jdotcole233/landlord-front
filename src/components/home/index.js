@@ -2,6 +2,7 @@ import React from "react";
 import { stats } from "../Data/util";
 import Footer from "../Navigation/footer";
 import CountUp from "react-countup"
+import RegisterForm from "./Register";
 
 const Home = () => {
   return (
@@ -9,7 +10,7 @@ const Home = () => {
       <section
         className={`lg:h-5/6 bg-landingBanner bg-cover flex justify-start items-center lg:py-0 py-5 px-5 lg:px-40`}
       >
-        <RegisterForm />
+        <Register />
       </section>
 
       <section className="flex flex-col items-center justify-center h-96 py-5 bg-[#F5FAFF] ">
@@ -138,7 +139,7 @@ const HomeStates = ({ number, content, color }) => {
 
 
 
-const RegisterForm = () => {
+const Register = () => {
   return (
     <div className=" lg:w-4/12  bg-white rounded-md px-10 py-10">
       <h1 className="font-bold text-gray-600 text-4xl text-left">
@@ -147,76 +148,7 @@ const RegisterForm = () => {
       <h1 className="font-bold text-gray-600 text-4xl text-left mb-2 ">
         to manage
       </h1>
-
-      <div className=" flex-col">
-        <label className="block text-gray-400">First Name</label>
-        <input
-          className="w-full outline-none border-0 px-2 rounded h-11 bg-[#EDF1FB]"
-          type="text"
-          placeholder=""
-        />
-      </div>
-      <div className="flex mt-4">
-        <div className=" flex-col mr-6 flex-1">
-          <label className="block text-gray-400">Other Name (optional)</label>
-          <input
-            className="w-full outline-none border-0 px-2 rounded h-11 bg-[#EDF1FB]"
-            type="text"
-            placeholder=""
-          />
-        </div>
-        <div className=" flex-col flex-1">
-          <label className="block text-gray-400">Last Name</label>
-          <input
-            className="w-full outline-none border-0 px-2 rounded h-11 bg-[#EDF1FB]"
-            type="text"
-            placeholder=""
-          />
-        </div>
-      </div>
-
-      <div className="flex mt-4">
-        <div className=" flex-col mr-6 flex-1">
-          <label className="block text-gray-400">Email</label>
-          <input
-            className="w-full outline-none border-0 px-2 rounded h-11 bg-[#EDF1FB]"
-            type="email"
-            placeholder=""
-          />
-        </div>
-        <div className=" flex-col flex-1">
-          <label className="block text-gray-400">Phone number</label>
-          <input
-            className="w-full outline-none border-0 px-2 rounded h-11 bg-[#EDF1FB]"
-            type="tel"
-            placeholder=""
-          />
-        </div>
-      </div>
-
-      <div className="flex mt-4">
-        <div className=" flex-col mr-6 flex-1">
-          <label className="block text-gray-400">Password</label>
-          <input
-            className="w-full outline-none border-0 px-2 rounded h-11 bg-[#EDF1FB]"
-            type="password"
-            placeholder="*******"
-          />
-        </div>
-        <div className=" flex-col flex-1">
-          <label className="block text-gray-400">Confirm password</label>
-          <input
-            className="w-full outline-none border-0 px-2 rounded h-11 bg-[#EDF1FB]"
-            type="text"
-            placeholder="*******"
-          />
-        </div>
-      </div>
-      <div className="w-full">
-        <button className="bg-blue-500 text-white w-full h-10 rounded mt-5 text-lg">
-          Register
-        </button>
-      </div>
+      <RegisterForm />
     </div>
   );
 };

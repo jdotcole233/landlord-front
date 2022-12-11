@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,  } from "react";
 import Home from "./components/Home";
 import Contact from "./components/Contact/Contact";
 import Header from "./components/Navigation/header";
@@ -7,10 +7,15 @@ import Login from "./components/Auth/Login";
 import About from "./components/About/About";
 import MobileMenu from "./components/Navigation/MobileMenu";
 import Dashboard from "./components/Dashboard/dashboard";
+import Profile from "./components/Dashboard/profile";
+import ChangePassword from "./components/Dashboard/password";
+import MyProperties from "./components/Dashboard/properties";
 
 function App() {
+
   const [showLogin, setShowLogin] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+
   return (
     <>
       <div className="flex-col  w-full">
@@ -20,6 +25,9 @@ function App() {
           <Route path="/aboutus" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/password" element={<ChangePassword />} />
+          <Route path="/properties" element={<MyProperties />} />
         </Routes>
         {
           showLogin && <Login setShowLogin={setShowLogin} />
