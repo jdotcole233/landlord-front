@@ -1,38 +1,43 @@
 import React from "react";
 import DashboardNavigation from "../Navigation";
 import { properties } from "../../Data/util";
+import { Link } from "react-router-dom";
+import Footer from "../../Navigation/footer";
 
 const MyProperties = () => {
   return (
-    <div className="bg-[#F5FAFF] h-screen px-10 py-20 flex justify-start items-start">
-      <DashboardNavigation />
-      <section className="ml-10 bg-white w-full px-10 py-10">
-        <div className="flex justify-between pr-5">
-          <h1 className="text-2xl font-bold text-gray-600">My Property</h1>
-          <button className="flex bg-blue-500 px-2 py-1 justify-center items-center rounded-full text-white font-semibold">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="w-4 h-4"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 4.5v15m7.5-7.5h-15"
-              />
-            </svg>
-            <span>Apartment</span>
-          </button>
-        </div>
-        <div className="grid grid-cols-4 gap-3 mt-5 ">
-          {properties.map((property, key) => (
-            <Property {...property} />
-          ))}
-        </div>
-      </section>
+    <div>
+      <div className="bg-[#F5FAFF] h-screen px-10 py-20 flex justify-start items-start overflow-scroll">
+        <DashboardNavigation />
+        <section className="ml-10 bg-white w-full px-10 py-10 rounded-md shadow-md">
+          <div className="flex justify-between pr-5">
+            <h1 className="text-2xl font-bold text-gray-600">My Property</h1>
+            <button className="flex bg-blue-500 px-2 py-1 justify-center items-center rounded-full text-white font-semibold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="w-4 h-4"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                />
+              </svg>
+              <span>Apartment</span>
+            </button>
+          </div>
+          <div className="grid grid-cols-4 gap-3 mt-5 ">
+            {properties.map((property, key) => (
+              <Property key={key} {...property} />
+            ))}
+          </div>
+        </section>
+      </div>
+      <Footer />
     </div>
   );
 };
@@ -76,7 +81,10 @@ const Property = ({ apartment_name, image, location }) => {
             />
           </svg>
         </span>
-        <span className="border bg-slate-700 cursor-pointer px-2 rounded flex justify-center items-center py-1 text-white mr-1">
+        <Link
+          to="/rooms"
+          className="border bg-slate-700 cursor-pointer px-2 rounded flex justify-center items-center py-1 text-white mr-1"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -96,7 +104,7 @@ const Property = ({ apartment_name, image, location }) => {
               d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
             />
           </svg>
-        </span>
+        </Link>
         <span className="border bg-slate-700 cursor-pointer px-2 rounded flex justify-center items-center py-1 text-red-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"

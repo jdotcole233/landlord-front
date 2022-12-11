@@ -58,13 +58,13 @@ const Footer = () => {
             <span>My Account</span>
             <ul className="text-lg font-light flex flex-col mt-5">
               <li>
-                <Link to="/home">My profile</Link>
+                <Link to="/profile">My profile</Link>
               </li>
               <li>
-                <Link to="/about">My account</Link>
+                <Link to="/dashboard">My account</Link>
               </li>
               <li>
-                <Link to="/contact">My properties</Link>
+                <Link to="/properties">My properties</Link>
               </li>
               <li>
                 <Link to="/faqs">Favorites</Link>

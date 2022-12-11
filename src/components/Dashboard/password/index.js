@@ -1,8 +1,10 @@
 import React from "react";
+import Footer from "../../Navigation/footer";
 import DashboardNavigation from "../Navigation";
 
 const ChangePassword = () => {
   return (
+    <>
     <div className="bg-[#F5FAFF] h-screen px-10 py-20 flex justify-start items-start">
       <DashboardNavigation />
       <section className="ml-10 w-full bg-white px-10 py-10">
@@ -42,6 +44,8 @@ const ChangePassword = () => {
         </div>
       </section>
     </div>
+    <Footer />
+    </>
   );
 };
 

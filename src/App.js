@@ -10,6 +10,9 @@ import Dashboard from "./components/Dashboard/dashboard";
 import Profile from "./components/Dashboard/profile";
 import ChangePassword from "./components/Dashboard/password";
 import MyProperties from "./components/Dashboard/properties";
+import Rooms from "./components/Dashboard/properties/Rooms";
+import Room from "./components/Dashboard/properties/Room";
+import Tenant from "./components/Dashboard/Tenant";
 
 function App() {
 
@@ -28,6 +31,9 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/password" element={<ChangePassword />} />
           <Route path="/properties" element={<MyProperties />} />
+          <Route path="/rooms" element={<Rooms />} />
+          <Route path="/room" element={<Room />} />
+          <Route path="/tenants" element={<Tenant />} />
         </Routes>
         {
           showLogin && <Login setShowLogin={setShowLogin} />
