@@ -37,7 +37,7 @@ const MobileMenu = ({
 
         {/* Menu */}
         <ul className="mt-5">
-          <li className="flex border-b border-t border-b-gray-200 text-lg font-light text-blue-700 justify-between px-5 py-3">
+          <li onClick={() => setShowMobileMenu(false)}  className="flex border-b border-t border-b-gray-200 text-lg font-light text-blue-700 justify-between px-5 py-3">
             <Link to="/">Home</Link>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ const MobileMenu = ({
               />
             </svg>
           </li>
-          <li className="flex border-b border-b-gray-200 text-lg font-light text-blue-700 justify-between px-5 py-3">
+          <li onClick={() => setShowMobileMenu(false)} className="flex border-b border-b-gray-200 text-lg font-light text-blue-700 justify-between px-5 py-3">
             <Link to="/aboutus">About</Link>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +71,7 @@ const MobileMenu = ({
               />
             </svg>
           </li>
-          <li className="flex border-b border-b-gray-200 text-lg font-light text-blue-700 justify-between px-5 py-3">
+          <li onClick={() => setShowMobileMenu(false)} className="flex border-b border-b-gray-200 text-lg font-light text-blue-700 justify-between px-5 py-3">
             <Link to="/contact">Contact</Link>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +88,7 @@ const MobileMenu = ({
               />
             </svg>
           </li>
-          <li className="flex border-b border-b-gray-200 text-lg font-light text-blue-700 justify-between px-5 py-3">
+          <li onClick={() => setShowMobileMenu(false)} className="flex border-b border-b-gray-200 text-lg font-light text-blue-700 justify-between px-5 py-3">
             <Link to="/">Register</Link>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +107,7 @@ const MobileMenu = ({
           </li>
           <li>
           <div className="flex  justify-end p-5">
-          <Link
+          {/* <Link
             to="/signup"
             className="text-green-400  font-light  px-8 text-lg  mr-2 py-1 flex items-center "
           >
@@ -127,7 +127,7 @@ const MobileMenu = ({
             </svg>
 
             <span>Manage </span>
-          </Link>
+          </Link> */}
           <button
           onClick={() => {
             setShowLogin(true)

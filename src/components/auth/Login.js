@@ -8,9 +8,9 @@ const Login = ({ ref, setShowLogin }) => {
         backgroundColor: "rgba(0, 0, 0, 0.7)",
       }}
       id="enabled"
-      className="w-full h-screen  absolute top-0 bottom-0 flex justify-center items-center"
+      className="w-full h-screen lg:px-0 px-5  absolute top-0 bottom-0 flex justify-center items-center"
     >
-      <div className="lg:w-3/12   bg-white rounded-md px-10 pb-6 pt-4">
+      <div className="lg:w-3/12   bg-white rounded-md w-full px-3 lgpx-10 pb-6 pt-4">
         <div className="flex justify-end ">
           <span onClick={() => setShowLogin(false)} className="cursor-pointer">
             <svg
@@ -33,7 +33,7 @@ const Login = ({ ref, setShowLogin }) => {
           Log In
         </h1>
         <div className=" flex-col mb-3">
-          <label className="block text-gray-700 text-sm">Email</label>
+          <label className="block text-gray-700 text-sm mb-2">Email</label>
           <div className="flex justify-center items-center bg-gray-50 px-2 rounded">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +59,7 @@ const Login = ({ ref, setShowLogin }) => {
         </div>
 
         <div className=" flex-col mb-3">
-          <label className="block text-gray-700 text-sm">Password</label>
+          <label className="block text-gray-700 text-sm mb-2">Password</label>
           <div className="flex justify-center items-center bg-gray-50 px-2 rounded">
             <svg
               xmlns="http://www.w3.org/2000/svg"

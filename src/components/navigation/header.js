@@ -14,14 +14,14 @@ const Header = ({ setShowLogin, setShowMobileMenu }) => {
         </Link>
         <div className="hidden lg:flex flex-1 justify-end mr-4">
           <ul className="flex justify-around text-md w-64 text-blue-700">
-            <li className="mr-1">
-              <Link to="/">Home</Link>
+            <li>
+              <Link  to="/">Home</Link>
             </li>
             <li className="mr-1">
               <Link to="/aboutus">About</Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link  to="/contact">Contact</Link>
             </li>
           </ul>
         </div>

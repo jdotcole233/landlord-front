@@ -1,7 +1,7 @@
 import React from "react";
 import { stats } from "../Data/util";
 import Footer from "../Navigation/footer";
-import CountUp from "react-countup"
+import CountUp from "react-countup";
 import RegisterForm from "./Register";
 
 const Home = () => {
@@ -116,7 +116,234 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+
+      <section className="w-full lg:px-20 lg:py-10 px-2 py-5 bg-[#FFF6F5] flex flex-col">
+        <div className="flex-1 flex justify-center items-center lg:py-10 py-5">
+          <div>
+            <h1 className="lg:text-4xl  text-xl font-extrabold text-center">See Our Annual Packages</h1>
+            <p className="text-center lg:text-sm text-xs">
+              Manage your entire apartments with as little  
+            </p>
+          </div>
+          {/* <div className="h-full  bg-[url('https://cdn.pixabay.com/photo/2012/04/26/18/47/sofa-42817_960_720.png')] bg-contain bg-center bg-no-repeat  w-full"></div> */}
+        </div>
+        <div className="flex-1 flex lg:flex-row flex-col justify-center items-center">
+          <div className="border w-96 bg-white rounded-md shadow-md px-3 py-3 lg:mr-5 lg:mb-0 mb-5">
+            <div className="w-full bg-[#E5F6FE] h-40  rounded flex flex-col justify-center items-center">
+              <div className="flex">
+                <div className="mr-1">
+                  <span className="font-extrabold text-3xl text-[#03A9F4]">
+                    $
+                  </span>
+                </div>
+                <span className="text-7xl font-extrabold text-[#03A9F4]">
+                  50
+                </span>
+              </div>
+              <h1 className="text-2xl font-extrabold text-center">
+                Basic Package
+              </h1>
+            </div>
+
+            <div>
+              <ul>
+                <li className="flex justify-between py-3 border-b border-dashed border-[1.5]">
+                  <span className="text-lg font-thin">5+ Rooms</span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#CCF6F4"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="#27CC8F"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </span>
+                </li>
+                <li className="flex justify-between py-3 border-b border-dashed border-[1.5]">
+                  <span className="text-lg font-thin">
+                    24x7 Fully Supported
+                  </span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#CCF6F4"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="#27CC8F"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </span>
+                </li>
+                <li className="flex justify-between py-3 border-b border-dashed border-[1.5]">
+                  <span className="text-lg font-thin">50 Storage</span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#CCF6F4"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="#27CC8F"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </span>
+                </li>
+                <li className="flex justify-between py-3 border-b border-dashed border-[1.5]">
+                  <span className="text-lg font-thin">3 Months Validity</span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#E9EBF3"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="#fff"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="px-5 py-5">
+              <button className="text-lg font-bold w-full py-4 rounded border-2 border-zinc-300 hover:bg-blue-400 hover:border-blue-400 hover:text-blue-600">
+                Choose Plan
+              </button>
+            </div>
+          </div>
+
+          <div className="border w-96 bg-white rounded-md shadow-md px-3 py-3">
+            <div className="w-full bg-[#FFEDEA] h-40  rounded flex flex-col justify-center items-center">
+              <div className="flex">
+                <div className="mr-1">
+                  <span className="font-extrabold text-3xl text-[#FD5332]">
+                    $
+                  </span>
+                </div>
+                <span className="text-7xl  font-extrabold text-[#FD5332]">
+                  <span>45</span>
+                </span>
+              </div>
+              <h1 className="text-2xl font-extrabold text-center">
+                Platinum Package
+              </h1>
+            </div>
+
+            <div>
+              <ul>
+                <li className="flex justify-between py-3 border-b border-dashed border-[1.5]">
+                  <span className="text-lg font-thin">20+ Rooms</span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#CCF6F4"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="#27CC8F"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </span>
+                </li>
+                <li className="flex justify-between py-3 border-b border-dashed border-[1.5]">
+                  <span className="text-lg font-thin">
+                    24x7 Fully Supported
+                  </span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#CCF6F4"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="#27CC8F"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </span>
+                </li>
+                <li className="flex justify-between py-3 border-b border-dashed border-[1.5]">
+                  <span className="text-lg font-thin">Unlimited Storage</span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#CCF6F4"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="#27CC8F"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </span>
+                </li>
+                <li className="flex justify-between py-3 border-b border-dashed border-[1.5]">
+                  <span className="text-lg font-thin">3 Months Validity</span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#CCF6F4"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="#27CC8F"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="px-5 py-5">
+              <button className="text-lg font-bold w-full py-4 rounded border-2 border-zinc-300 hover:bg-blue-400 hover:border-blue-400 hover:text-blue-600">
+                Choose Plan
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
@@ -128,7 +355,7 @@ const HomeStates = ({ number, content, color }) => {
       className={`-bg-blue-${color} lg:mr-3 opacity-75 lg:w-64 rounded-md flex flex-col px-5 py-2 `}
     >
       <div className="text-3xl font-bold p-0 text-gray-800 flex items-center justify-center">
-        <CountUp  end={number}/>+
+        <CountUp end={number} />+
       </div>
       <div className="text-gray-800  p-0 font-light h-full text-lg flex justify-center items-center">
         {content}
@@ -136,8 +363,6 @@ const HomeStates = ({ number, content, color }) => {
     </div>
   );
 };
-
-
 
 const Register = () => {
   return (

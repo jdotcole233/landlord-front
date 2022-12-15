@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import "react-notifications/lib/notifications.css";
 import Home from "./components/Home";
 import Contact from "./components/Contact/Contact";
 import Header from "./components/Navigation/header";
@@ -18,6 +19,9 @@ import RoomForm from "./components/Dashboard/properties/Rooms/RoomForm";
 import TenantForm from "./components/Dashboard/Tenant/TenantForm";
 import AppContext from "./components/Context/Context"
 import MobileDashboardMenu from "./components/Dashboard/Navigation/MobileDashboardMenu";
+import PageNotFound from "./components/404";
+import { NotificationContainer } from "react-notifications"
+
 
 function App() {
 
@@ -43,6 +47,7 @@ function App() {
           <Route path="/addApartment" element={<ApartmentForm />} />
           <Route path="/addRoom" element={<RoomForm />} />
           <Route path="/addTenant" element={<TenantForm />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
         {
           showLogin && <Login setShowLogin={setShowLogin} />
@@ -53,6 +58,7 @@ function App() {
         {
           mobileMenu && <MobileDashboardMenu />
         }
+        <NotificationContainer />
       </div>
     </>
   );
