@@ -8,6 +8,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.2.1",
+    "countries-list": "^2.6.1",
+    "currencies.json": "^1.0.2",
     "env-cmd": "^10.1.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",

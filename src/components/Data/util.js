@@ -139,7 +139,7 @@ export const rooms = [
         room_name: "Room 1",
         room_number: "1",
         image: "",
-        tenant: [
+        tenants: [
             {
                 first_name: "Waylon",
                 other_name: "",
@@ -211,7 +211,7 @@ export const rooms = [
         room_name: "Room 1",
         room_number: "1",
         image: "",
-        tenant: [
+        tenants: [
             {
                 first_name: "Waylon",
                 other_name: "",
@@ -283,7 +283,7 @@ export const rooms = [
         room_name: "Room 1",
         room_number: "1",
         image: "",
-        tenant: [
+        tenants: [
             {
                 first_name: "Waylon",
                 other_name: "",
@@ -355,7 +355,7 @@ export const rooms = [
         room_name: "Room 1",
         room_number: "1",
         image: "",
-        tenant: [
+        tenants: [
             {
                 first_name: "Waylon",
                 other_name: "",
@@ -427,7 +427,7 @@ export const rooms = [
         room_name: "Room 1",
         room_number: "1",
         image: "",
-        tenant: [
+        tenants: [
             {
                 first_name: "Waylon",
                 other_name: "",
@@ -499,7 +499,7 @@ export const rooms = [
         room_name: "Room 1",
         room_number: "1",
         image: "",
-        tenant: [
+        tenants: [
             {
                 first_name: "Waylon",
                 other_name: "",
@@ -571,7 +571,7 @@ export const rooms = [
         room_name: "Room 1",
         room_number: "1",
         image: "",
-        tenant: [
+        tenants: [
             {
                 first_name: "Waylon",
                 other_name: "",
@@ -643,7 +643,7 @@ export const rooms = [
         room_name: "Room 1",
         room_number: "1",
         image: "",
-        tenant: [
+        tenants: [
             {
                 first_name: "Waylon",
                 other_name: "",
@@ -715,7 +715,7 @@ export const rooms = [
         room_name: "Room 1",
         room_number: "1",
         image: "",
-        tenant: [
+        tenants: [
             {
                 first_name: "Waylon",
                 other_name: "",

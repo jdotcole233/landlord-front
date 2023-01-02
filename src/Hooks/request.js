@@ -30,6 +30,7 @@ export const communication = async ({ url, data }) => {
 };
 
 export const makeRequestWithData = ({ url, data, reset, setIsLoading }) => {
+  console.log("url ", url);
   axios
     .post(`${process.env.REACT_APP_BASE_URL}${url}`, data, {
       headers: {

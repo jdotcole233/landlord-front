@@ -3354,6 +3354,11 @@ cosmiconfig@^7.0.0:
     path-type "^4.0.0"
     yaml "^1.10.0"
 
+countries-list@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/countries-list/-/countries-list-2.6.1.tgz#d479757ac873b1e596ccea0a925962d20396c0cb"
+  integrity sha512-jXM1Nv3U56dPQ1DsUSsEaGmLHburo4fnB7m+1yhWDUVvx5gXCd1ok/y3gXCjXzhqyawG+igcPYcAl4qjkvopaQ==
+
 countup.js@^2.3.2:
   version "2.3.2"
   resolved "https://registry.npmjs.org/countup.js/-/countup.js-2.3.2.tgz"
@@ -3581,6 +3586,11 @@ csstype@^3.0.2:
   version "3.1.1"
   resolved "https://registry.npmjs.org/csstype/-/csstype-3.1.1.tgz"
   integrity sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==
+
+currencies.json@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/currencies.json/-/currencies.json-1.0.2.tgz#f76fedc7f4089bf95bed1bb71a77993e95787487"
+  integrity sha512-5a9gHuZTS+s228BCF/nTWt+UP5RIZMs9f9oEryFHHvqNd+1qrSVeLJfxmCRlHlfLm8YDGRXfRRtkwru5LBd3mg==
 
 damerau-levenshtein@^1.0.8:
   version "1.0.8"

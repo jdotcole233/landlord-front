@@ -7,14 +7,14 @@ import SearchBar from "../Dashboard/SearchBar";
 import MobileDashbaordNavigation from "../Navigation/MobileDashboardNavigation";
 import { useMakeRequestForData } from "../../../Hooks/request";
 import Waiting from "../Dashboard/Loading";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 const MyProperties = () => {
-  const { isLoading , responseData } = useMakeRequestForData({
+  const { isLoading, responseData } = useMakeRequestForData({
     url: "apartments/apartments",
   });
 
-  console.log(responseData)
+  console.log(responseData);
 
   return (
     <div>
@@ -48,11 +48,15 @@ const MyProperties = () => {
           <SearchBar name="apartment" />
           {isLoading ? (
             <Waiting />
-          ) : (
+          ) : responseData?.length ? (
             <div className="lg:grid lg:grid-cols-4 lg:gap-3 mt-5 ">
               {responseData?.map((property, key) => (
                 <Property key={key} {...property} />
               ))}
+            </div>
+          ) : (
+            <div className="w-full py-10">
+              <span className="font-bold text-2xl">No Apartments Found</span>
             </div>
           )}
         </section>
@@ -62,17 +66,17 @@ const MyProperties = () => {
   );
 };
 
-const Property = ({id, apartment_name, image, location }) => {
+const Property = ({ id, apartment_name, image, location }) => {
   const history = useNavigate();
 
-  const editPropertDetails = (apartment_id) => {
-    history("/addApartment", {
+  const segueNext = (url, requestType, apartment_id) => {
+    history(url, {
       state: {
-        requestType: "editApartment",
-        apartment_id
-      }
+        requestType,
+        apartment_id,
+      },
     });
-  }
+  };
 
   return (
     <div className="border lg:mb-0 mb-5 shadow-md rounded-md">
@@ -97,8 +101,7 @@ const Property = ({id, apartment_name, image, location }) => {
       </div>
       <div className="flex px-2 py-2">
         <button
-          onClick={() => editPropertDetails(id)}
-          // to="/addApartment"
+          onClick={() => segueNext("/addApartment", "editApartment", id)}
           className="border hover:shadow-lg hover:bg-slate-900 bg-slate-700 cursor-pointer px-2 rounded flex justify-center items-center py-1 text-white mr-1"
         >
           <svg
@@ -116,8 +119,8 @@ const Property = ({id, apartment_name, image, location }) => {
             />
           </svg>
         </button>
-        <Link
-          to="/rooms"
+        <button
+          onClick={() => segueNext("/rooms", "viewRooms", id)}
           className="border bg-slate-700 hover:shadow-lg hover:bg-slate-900 cursor-pointer px-2 rounded flex justify-center items-center py-1 text-white mr-1"
         >
           <svg
@@ -139,7 +142,7 @@ const Property = ({id, apartment_name, image, location }) => {
               d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
             />
           </svg>
-        </Link>
+        </button>
         <span className="border bg-slate-700 cursor-pointer hover:shadow-lg hover:bg-slate-900 px-2 rounded flex justify-center items-center py-1 text-red-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"

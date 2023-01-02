@@ -10,6 +10,7 @@ import {
   useMakeRequestForData,
 } from "../../../../Hooks/request";
 import { useLocation } from "react-router-dom";
+import { data } from "autoprefixer";
 
 const ApartmentForm = () => {
   const history = useNavigate();
@@ -19,12 +20,10 @@ const ApartmentForm = () => {
     formState: { errors },
     reset,
   } = useForm();
-  const {
-    state
-  } = useLocation();
+
+  const { state } = useLocation();
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState(null);
-  // console.log(requestType, " ", apartment_id);
 
   const { isLoading: fetching, responseData } = useMakeRequestForData({
     url: `apartments/apartment/${state?.apartment_id}`,
@@ -42,7 +41,7 @@ const ApartmentForm = () => {
     data["landlord_id"] = 20;
     setIsLoading(true);
     makeRequestWithData({
-      url: "apartments/create-apartment",
+      url: state?.requestType ? `apartments/edit-apartment/${state?.apartment_id}` : "apartments/create-apartment",
       data,
       reset,
       setIsLoading,
@@ -56,7 +55,7 @@ const ApartmentForm = () => {
         <MobileDashbaordNavigation />
         {/* Forms */}
         <form
-          onSubmit={() => handleSubmit(addApartment)}
+          // onSubmit={handleSubmit(addApartment)}
           className="lg:px-10 lg:py-10 py-5 px-2 bg-white rounded w-full lg:ml-10"
         >
           <div className="flex items-center justify-between">
@@ -96,13 +95,16 @@ const ApartmentForm = () => {
           </div>
           <h1 className="font-bold text-2xl mt-5">Apartment Location</h1>
           <div className=" flex-col">
-            <label className="block text-gray-400">Choose District</label>
+            <label className="block text-gray-400">Enter District</label>
             <input
               className="w-full outline-none border-0 px-2 rounded h-11 bg-[#EDF1FB]"
               type="text"
               placeholder="E.g. Ga-East District"
-              defaultValue={formData?.location.district || ""}
-              {...register("district")}
+              defaultValue={formData?.location?.district || ""}
+              value={formData?.location?.district || ""}
+              {...register("district", {
+                required: false
+              })}
             />
           </div>
           <div className="flex mt-4">
@@ -112,7 +114,7 @@ const ApartmentForm = () => {
                 className="w-full outline-none border-0 px-2 rounded h-11 bg-[#EDF1FB]"
                 type="text"
                 placeholder="E.g. Hse. No. 11"
-                defaultValue={formData?.location.street_address || ""}
+                defaultValue={formData?.location?.street_address || ""}
                 {...register("street_address", {
                   required: "Location of apartment apartment required",
                 })}
@@ -126,7 +128,8 @@ const ApartmentForm = () => {
             <div className=" flex-col flex-1">
               <label className="block text-gray-400">Choose Region</label>
               <select
-                defaultValue={formData?.location.region || ""}
+                defaultValue={formData?.location?.region || ""}
+                value={formData?.location?.region || ""}
                 {...register("region", {
                   required: "Select a region where apartment is located",
                 })}
@@ -153,7 +156,7 @@ const ApartmentForm = () => {
                 className="w-full outline-none border-0 px-2 rounded h-11 bg-[#EDF1FB]"
                 type="text"
                 placeholder="Enter City"
-                defaultValue={formData?.location.city || ""}
+                defaultValue={formData?.location?.city  || ""}
                 {...register("city", {
                   required: "City is required",
                 })}
@@ -169,19 +172,30 @@ const ApartmentForm = () => {
               <input
                 className="w-full outline-none border-0 px-2 rounded h-11 bg-[#EDF1FB]"
                 type="text"
-                defaultValue={formData?.location.digital_address || ""}
+                defaultValue={formData?.location?.digital_address  || ""}
                 placeholder="E.g. GE-048-2700"
                 {...register("digital_address")}
               />
             </div>
           </div>
           <div className="mt-5">
-            <button
-              type="submit"
-              className="bg-blue-400 text-white lg:px-12 lg:py-3  px-4 py-1 hover:bg-blue-700 hover:shadow-2xl rounded-md text-lg border-2 border-blue-600"
-            >
-              Submit
-            </button>
+            {state?.requestType ? (
+              <button
+                onClick={handleSubmit(addApartment)}
+                type="submit"
+                className="bg-blue-400 text-white lg:px-12 lg:py-3  px-4 py-1 hover:bg-blue-700 hover:shadow-2xl rounded-md text-lg border-2 border-blue-600"
+              >
+                Save changes
+              </button>
+            ) : (
+              <button
+                onClick={handleSubmit(addApartment)}
+                type="submit"
+                className="bg-blue-400 text-white lg:px-12 lg:py-3  px-4 py-1 hover:bg-blue-700 hover:shadow-2xl rounded-md text-lg border-2 border-blue-600"
+              >
+                Submit
+              </button>
+            )}
           </div>
         </form>
       </div>

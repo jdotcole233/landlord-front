@@ -8,10 +8,18 @@ import AllTenant from "./AllTenants";
 import { Link } from "react-router-dom";
 import MobileDashbaordNavigation from "../Navigation/MobileDashboardNavigation";
 import Footer from "../../Navigation/footer";
+import { useMakeRequestForData } from "../../../Hooks/request";
 
 
 const Tenant = () => {
     const [tabs, setTabs] = useState(1);
+
+    const { isLoading, responseData } = useMakeRequestForData({
+      url: `landlord/landlord/20`,
+    });
+
+
+    console.table(responseData);
 
   return (
     <>
@@ -43,7 +51,7 @@ const Tenant = () => {
 
         <div className="lg:ml-4 flex-1 flex flex-col mt-5">
           <div className="flex w-full shadow-md rounded-full">
-            <div
+            {/* <div
               onClick={() => setTabs(1)}
               className={`flex-1 ${
                 tabs == 1
@@ -62,7 +70,7 @@ const Tenant = () => {
               } text-center lg:text-sm text-xs cursor-pointer  py-2 shadow-sm `}
             >
               Previous Tenants
-            </div>
+            </div> */}
             <div
               onClick={() => setTabs(3)}
               className={`flex-1 ${
